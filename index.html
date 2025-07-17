@@ -428,6 +428,15 @@
       // Setas
       arrowUp.onclick = () => { if (!isBusy && activeIdx > 0) goToCard(activeIdx - 1); };
       arrowDown.onclick = () => { if (!isBusy && activeIdx < cards.length - 1) goToCard(activeIdx + 1); };
+      // Permite toque nas setas em dispositivos móveis
+      arrowUp.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        if (!isBusy && activeIdx > 0) goToCard(activeIdx - 1);
+      }, { passive: false });
+      arrowDown.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        if (!isBusy && activeIdx < cards.length - 1) goToCard(activeIdx + 1);
+      }, { passive: false });
       // Teclado
       carousel.addEventListener('keydown', (e) => {
         if (isBusy) return;
@@ -452,19 +461,45 @@
       }, { passive: false });
       // Touch (mobile)
       let touchStartY = null;
+      let touchLastY = null;
+      let touchMoved = false;
       carousel.addEventListener('touchstart', (e) => {
-        if (e.touches.length === 1) touchStartY = e.touches[0].clientY;
-      });
-      carousel.addEventListener('touchend', (e) => { touchStartY = null; });
-      carousel.addEventListener('touchmove', (e) => {
-        if (touchStartY === null || isBusy) return;
-        const deltaY = e.touches[0].clientY - touchStartY;
-        if (Math.abs(deltaY) > 40) {
-          if (deltaY < 0 && activeIdx < cards.length - 1) goToCard(activeIdx + 1);
-          else if (deltaY > 0 && activeIdx > 0) goToCard(activeIdx - 1);
-          touchStartY = null;
+        if (e.touches.length === 1) {
+          touchStartY = e.touches[0].clientY;
+          touchLastY = touchStartY;
+          touchMoved = false;
         }
       });
+      carousel.addEventListener('touchend', (e) => {
+        // Se não houve movimento significativo, não faz nada
+        if (!touchMoved) {
+          touchStartY = null;
+          touchLastY = null;
+          return;
+        }
+        touchStartY = null;
+        touchLastY = null;
+        touchMoved = false;
+      });
+      carousel.addEventListener('touchmove', (e) => {
+        if (touchStartY === null || isBusy) return;
+        const currentY = e.touches[0].clientY;
+        const deltaY = currentY - touchLastY;
+        // Suaviza o movimento: só troca de card se o movimento for longo e não repete enquanto o dedo não voltar
+        if (Math.abs(currentY - touchStartY) > 40) {
+          if (currentY < touchStartY && activeIdx < cards.length - 1) {
+            goToCard(activeIdx + 1);
+            touchStartY = currentY; // reinicia para evitar múltiplos pulos
+            touchMoved = true;
+          } else if (currentY > touchStartY && activeIdx > 0) {
+            goToCard(activeIdx - 1);
+            touchStartY = currentY;
+            touchMoved = true;
+          }
+        }
+        touchLastY = currentY;
+        e.preventDefault(); // Evita scroll nativo
+      }, { passive: false });
       // Foco acessível no card ativo
       function focusActiveCard() {
         cards[activeIdx]?.focus();
