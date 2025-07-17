@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leon Digory | Links, Portfólio, Contato e Redes</title>
+    <meta name="description" content="Leon Digory - Desenvolvedor Web/Mobile. Veja meus links, portfólio, currículo, redes sociais e contato. Página moderna, responsiva e com visual neon." />
+    <meta name="keywords" content="Leon Digory, Leonardo Araújo, desenvolvedor, web, mobile, portfólio, currículo, LinkedIn, GitHub, Instagram, e-mail, link-in-bio, neon, tecnologia, design, criatividade, soluções digitais, Netlify" />
+    <meta name="author" content="Leon Digory" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://SEU-SITE-NETLIFY.netlify.app/" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://SEU-SITE-NETLIFY.netlify.app/" />
+    <meta property="og:title" content="Leon Digory | Links, Portfólio, Contato e Redes" />
+    <meta property="og:description" content="Leon Digory - Desenvolvedor Web/Mobile. Veja meus links, portfólio, currículo, redes sociais e contato." />
+    <meta property="og:image" content="https://SEU-SITE-NETLIFY.netlify.app/src/profile.png" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://SEU-SITE-NETLIFY.netlify.app/" />
+    <meta name="twitter:title" content="Leon Digory | Links, Portfólio, Contato e Redes" />
+    <meta name="twitter:description" content="Leon Digory - Desenvolvedor Web/Mobile. Veja meus links, portfólio, currículo, redes sociais e contato." />
+    <meta name="twitter:image" content="https://SEU-SITE-NETLIFY.netlify.app/src/profile.png" />
+    <link href="src/output.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="src/profile.png" />
+  </head>
+  <body class="relative min-h-screen flex flex-col items-center justify-center bg-black overflow-x-hidden">
+    <!-- Background com overlay -->
+    <div class="fixed inset-0 -z-10">
+      <img src="src/background.png" alt="Background" class="w-full h-full object-cover object-top" />
+      <div class="bg-overlay"></div>
+    </div>
+
+    <!-- Topo do perfil -->
+    <div class="flex flex-col items-center mt-10 mb-8">
+      <div class="relative mb-3 flex flex-col items-center justify-center">
+        <!-- Canvas Neon ocupa a tela toda, mas efeito menor e centralizado -->
+        <canvas id="neon-canvas" style="position:fixed;left:0;top:0;width:100vw;height:100vh;z-index:1;pointer-events:none;"></canvas>
+        <!-- Foto de perfil, nome, check e player juntos -->
+        <div class="flex flex-col items-center justify-center gap-2 relative z-20">
+          <img src="src/profile.png" alt="Leon Digory" class="w-28 h-28 rounded-full border-4 border-cyan-400 shadow-lg object-cover" />
+          <div class="flex items-center gap-2 mt-2 mb-1">
+            <h1 class="text-2xl font-extrabold text-white tracking-wide drop-shadow-lg">Leon Digory</h1>
+            <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gradient-to-tr from-blue-500 to-cyan-400 border-2 border-white shadow-md">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke="none" class="w-3 h-3"><path d="M9.5 16.5l-4-4 1.41-1.41L9.5 13.67l7.09-7.09L18 7l-8.5 9.5z"/></svg>
+            </span>
+          </div>
+          <!-- Player discreto abaixo do nome -->
+          <div class="flex flex-col items-center justify-center bg-gradient-to-br from-cyan-900/80 to-blue-900/80 rounded-xl shadow px-2 py-1 min-w-[60px] w-auto mt-1 mb-1" style="max-width:120px;">
+            <audio id="audio-mp3" src="src/music.mp3" preload="auto" autoplay loop></audio>
+            <div class="flex items-center gap-1">
+              <button id="audio-toggle" class="w-6 h-6 flex items-center justify-center rounded-full bg-cyan-700/80 text-white shadow hover:bg-cyan-500 transition">
+                <svg id="audio-icon-play" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4 hidden"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v18l15-9-15-9z" /></svg>
+                <svg id="audio-icon-pause" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 4h4v16H6zm8 0h4v16h-4z" /></svg>
+              </button>
+              <input id="audio-volume" type="range" min="0" max="1" step="0.01" value="0.5" class="w-12 accent-cyan-400" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-row items-center justify-center gap-4 mt-4 w-full max-w-md">
+        <div class="flex-1">
+          <p class="text-justify text-cyan-100 text-base font-light italic leading-relaxed" style="font-family: 'Inter', 'Segoe UI', Arial, sans-serif; letter-spacing: 0.01em;">
+            Desenvolvedor Web/Mobile apaixonado por criar <span class="text-cyan-300 font-semibold">soluções intuitivas e impactantes</span>.
+            Unindo <span class="text-blue-200 font-semibold">tecnologia</span>, <span class="text-pink-200 font-semibold">criatividade</span> e <span class="text-purple-200 font-semibold">design</span> para transformar ideias em experiências digitais incríveis.
+          </p>
+        </div>
+      </div>
+      <!-- (Removido o iframe YouTube) -->
+    </div>
+
+    <!-- Carrossel de Links -->
+    <div id="carousel" class="flex flex-col lg:flex-row lg:flex-wrap lg:justify-center gap-6 w-full max-w-md lg:max-w-5xl mx-auto overflow-y-auto lg:overflow-y-visible h-[400px] lg:h-auto pb-4 no-scrollbar relative" style="padding-top:40px;padding-bottom:40px;z-index:5;">
+      <!-- Setas flutuantes -->
+      <button id="arrow-up" aria-label="Anterior" class="absolute left-1/2 -translate-x-1/2 z-20 -top-6 hidden bg-gradient-to-tr from-cyan-500/70 to-blue-500/70 shadow-lg rounded-full p-2 border-2 border-white/60 hover:scale-110 hover:shadow-xl hover:bg-cyan-400/80 transition-all duration-200 focus:outline-none backdrop-blur-md" style="box-shadow: 0 0 16px 4px #0ff8, 0 0 32px 8px #00eaff88;"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" class="w-7 h-7 opacity-80 group-hover:opacity-100 drop-shadow-[0_0_8px_#0ff]">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 15l-7-7-7 7" />
+        </svg>
+      </button>
+      <button id="arrow-down" aria-label="Próximo" class="absolute left-1/2 -translate-x-1/2 z-20 -bottom-6 hidden bg-gradient-to-tr from-pink-500/70 to-cyan-400/70 shadow-lg rounded-full p-2 border-2 border-white/60 hover:scale-110 hover:shadow-xl hover:bg-pink-400/80 transition-all duration-200 focus:outline-none backdrop-blur-md" style="box-shadow: 0 0 16px 4px #f0f8, 0 0 32px 8px #ff00c888;"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" class="w-7 h-7 opacity-80 group-hover:opacity-100 drop-shadow-[0_0_8px_#f0f]">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 9l7 7 7-7" />
+        </svg>
+      </button>
+      <!-- LinkedIn Card -->
+      <a href="https://www.linkedin.com/in/leonardo-araujo-57a3ab1b5/" target="_blank" class="carousel-card flex items-center bg-gradient-to-r from-blue-800/60 via-blue-600/60 to-cyan-500/60 shadow-lg rounded-2xl px-4 py-4 gap-4 border-2 border-blue-400/60 transition-all duration-300 group mx-auto w-[80%] max-w-sm h-36 min-h-36">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" class="w-14 h-14 rounded-xl object-contain bg-white/10 border-2 border-blue-300 shadow-md" />
+        <div class="flex-1 min-w-0">
+          <div class="font-bold text-white text-lg mb-1">LinkedIn</div>
+          <div class="text-xs text-blue-100">No meu LinkedIn você encontra minha trajetória profissional, experiências, certificações e conexões. É o espaço ideal para networking e oportunidades de colaboração.</div>
+        </div>
+      </a>
+      <!-- GitHub Card -->
+      <a href="https://github.com/leodigory" target="_blank" class="carousel-card flex items-center bg-gradient-to-r from-cyan-800/60 via-cyan-600/60 to-blue-700/60 shadow-lg rounded-2xl px-4 py-4 gap-4 border-2 border-cyan-400/60 transition-all duration-300 group mx-auto w-[80%] max-w-sm h-36 min-h-36">
+        <img src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_960_720.png" alt="GitHub" class="w-14 h-14 rounded-xl object-contain bg-white/10 border-2 border-cyan-300 shadow-md" />
+        <div class="flex-1 min-w-0">
+          <div class="font-bold text-white text-lg mb-1">GitHub</div>
+          <div class="text-xs text-cyan-100">Aqui está meu GitHub, o repositório das minhas ideias em código! Explore projetos pessoais, soluções criativas e experimentos que desenvolvi ao longo da minha jornada como desenvolvedor.</div>
+        </div>
+      </a>
+      <!-- Instagram Card -->
+      <a href="https://www.instagram.com/leon_digory" target="_blank" class="carousel-card flex items-center bg-gradient-to-r from-pink-700/60 via-pink-500/60 to-yellow-400/60 shadow-lg rounded-2xl px-4 py-4 gap-4 border-2 border-pink-400/60 transition-all duration-300 group mx-auto w-[80%] max-w-sm h-36 min-h-36">
+        <img src="https://cdn.pixabay.com/photo/2022/04/01/05/40/app-7104075_1280.png" alt="Instagram" class="w-14 h-14 rounded-xl object-contain bg-white/10 border-2 border-pink-300 shadow-md" />
+        <div class="flex-1 min-w-0">
+          <div class="font-bold text-white text-lg mb-1">Instagram</div>
+          <div class="text-xs text-pink-100">No Instagram compartilho um pouco do meu universo: bastidores dos projetos, inspirações, dicas de tecnologia e momentos do dia a dia.</div>
+        </div>
+      </a>
+      <!-- Currículo Card -->
+      <a href="#" target="_blank" class="carousel-card flex items-center bg-gradient-to-r from-purple-800/60 via-purple-600/60 to-pink-500/60 shadow-lg rounded-2xl px-4 py-4 gap-4 border-2 border-purple-400/60 transition-all duration-300 group mx-auto w-[80%] max-w-sm h-36 min-h-36">
+        <img src="https://play-lh.googleusercontent.com/YxETHYRkLgYNC4ePmX4A4zW15STbIlFzVVnpA23m2pw16EHvYxh5opj490kG5M546aeu" alt="Currículo" class="w-14 h-14 rounded-xl object-contain bg-white/10 border-2 border-purple-300 shadow-md" />
+        <div class="flex-1 min-w-0">
+          <div class="font-bold text-white text-lg mb-1">Currículo Digital</div>
+          <div class="text-xs text-purple-100">Acesse meu currículo digital para conhecer em detalhes minha formação, experiências profissionais, projetos de destaque e competências técnicas.</div>
+        </div>
+      </a>
+      <!-- E-mail Card -->
+      <a href="mailto:leodigory@gmail.com" class="carousel-card flex items-center bg-gradient-to-r from-cyan-800/60 via-blue-700/60 to-blue-900/60 shadow-lg rounded-2xl px-4 py-4 gap-4 border-2 border-cyan-400/60 transition-all duration-300 group mx-auto w-[80%] max-w-sm h-36 min-h-36">
+        <img src="https://static.vecteezy.com/system/resources/previews/022/613/021/non_2x/google-mail-gmail-icon-logo-symbol-free-png.png" alt="E-mail" class="w-14 h-14 rounded-xl object-contain bg-white/10 border-2 border-cyan-300 shadow-md" />
+        <div class="flex-1 min-w-0">
+          <div class="font-bold text-white text-lg mb-1">E-mail</div>
+          <div class="text-xs text-cyan-100">Quer conversar, tirar dúvidas, propor parcerias ou simplesmente trocar uma ideia? Meu e-mail está sempre aberto para novos contatos, oportunidades e desafios.</div>
+        </div>
+      </a>
+    </div>
+
+    <style>
+      .no-scrollbar {
+        scrollbar-width: none;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .carousel-card {
+        opacity: 0.2;
+        filter: blur(4px);
+        pointer-events: none;
+        cursor: default;
+        border-width: 2px;
+      }
+      .carousel-card.active {
+        opacity: 1;
+        filter: none;
+        pointer-events: auto;
+        cursor: pointer;
+        border-color: #22d3ee;
+        box-shadow: 0 0 0 3px #fff, 0 0 12px 4px #0ff, 0 0 32px 8px #0ff, 0 0 32px 8px #f0f;
+        z-index: 2;
+      }
+      .carousel-card.next, .carousel-card.prev {
+        opacity: 0.6;
+        filter: blur(2px);
+        pointer-events: none;
+        cursor: default;
+        z-index: 1;
+      }
+      .carousel-card.next2, .carousel-card.prev2 {
+        opacity: 0.3;
+        filter: blur(3px);
+        pointer-events: none;
+        cursor: default;
+        z-index: 0;
+      }
+      /* --- NOVO: Desktop mostra todos os cards sem opacidade/blur e esconde setas --- */
+      @media (min-width: 1024px) {
+        #arrow-up, #arrow-down {
+          display: none !important;
+        }
+        .carousel-card,
+        .carousel-card.next,
+        .carousel-card.prev,
+        .carousel-card.next2,
+        .carousel-card.prev2,
+        .carousel-card.active {
+          opacity: 1 !important;
+          filter: none !important;
+          pointer-events: auto !important;
+          cursor: pointer !important;
+          z-index: 1 !important;
+          border-color: #22d3ee !important;
+          box-shadow: none !important;
+          position: relative !important;
+        }
+        .carousel-card.neon {
+          box-shadow: 0 0 0 3px #fff, 0 0 12px 4px #0ff, 0 0 32px 8px #0ff, 0 0 32px 8px #f0f !important;
+          z-index: 3 !important;
+        }
+      }
+    </style>
+    <script>
+      // --- Player de áudio moderno, robusto e confiável ---
+      const audioMp3 = document.getElementById('audio-mp3');
+      const audioToggle = document.getElementById('audio-toggle');
+      const iconPlay = document.getElementById('audio-icon-play');
+      const iconPause = document.getElementById('audio-icon-pause');
+      const audioVolume = document.getElementById('audio-volume');
+      let isPlaying = false;
+      // Volume inicial 50%
+      audioMp3.volume = 0.5;
+      audioVolume.value = 0.5;
+      // Web Audio API globals
+      let audioCtx = null, analyser = null, dataArray = null, audioSource = null, neonSetupDone = false;
+      // Autoplay robusto
+      function tryAutoplay() {
+        // Setup Web Audio API só uma vez
+        if (!neonSetupDone) {
+          setupNeonAudio();
+          neonSetupDone = true;
+        }
+        // Tenta tocar e retomar contexto
+        function playAndResume() {
+          if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
+          audioMp3.play();
+          isPlaying = true;
+          iconPlay.classList.add('hidden');
+          iconPause.classList.remove('hidden');
+        }
+        audioMp3.play().then(() => {
+          isPlaying = true;
+          iconPlay.classList.add('hidden');
+          iconPause.classList.remove('hidden');
+        }).catch(() => {
+          // Se bloqueado, tenta no primeiro clique/tecla
+          const resume = () => {
+            playAndResume();
+            window.removeEventListener('pointerdown', resume);
+            window.removeEventListener('keydown', resume);
+          };
+          window.addEventListener('pointerdown', resume);
+          window.addEventListener('keydown', resume);
+        });
+      }
+      window.addEventListener('DOMContentLoaded', tryAutoplay);
+      window.addEventListener('focus', tryAutoplay);
+      // Play/Pause
+      audioToggle.addEventListener('click', () => {
+        if (isPlaying) {
+          audioMp3.pause();
+          iconPlay.classList.remove('hidden');
+          iconPause.classList.add('hidden');
+        } else {
+          if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
+          audioMp3.play();
+          iconPlay.classList.add('hidden');
+          iconPause.classList.remove('hidden');
+        }
+        isPlaying = !isPlaying;
+      });
+      // Volume
+      audioVolume.addEventListener('input', function(e) {
+        audioMp3.volume = parseFloat(e.target.value);
+      });
+      // Atualiza ícone se usuário pausar manualmente
+      audioMp3.addEventListener('pause', () => {
+        isPlaying = false;
+        iconPlay.classList.remove('hidden');
+        iconPause.classList.add('hidden');
+      });
+      audioMp3.addEventListener('play', () => {
+        isPlaying = true;
+        iconPlay.classList.add('hidden');
+        iconPause.classList.remove('hidden');
+      });
+
+      // --- Neon ao redor da foto de perfil, reativo ao som ---
+      const neonCanvas = document.getElementById('neon-canvas');
+      const neonCtx = neonCanvas.getContext('2d');
+      // Configura Web Audio API
+      function setupNeonAudio() {
+        try {
+          if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+          if (!audioSource) audioSource = audioCtx.createMediaElementSource(audioMp3);
+          if (!analyser) analyser = audioCtx.createAnalyser();
+          analyser.fftSize = 64;
+          dataArray = new Uint8Array(analyser.frequencyBinCount);
+          audioSource.connect(analyser);
+          analyser.connect(audioCtx.destination);
+        } catch (e) {
+          analyser = null;
+        }
+      }
+      // Ajusta o canvas para tela cheia e desenha halo menor, centralizado na foto
+      function resizeNeonCanvas() {
+        neonCanvas.width = window.innerWidth;
+        neonCanvas.height = window.innerHeight;
+      }
+      // Desenha halo/fumaça azul ainda mais nítido e responsivo à música
+      function drawNeonRing(intensity = 0.2) {
+        const w = neonCanvas.width;
+        const h = neonCanvas.height;
+        // Centraliza na foto de perfil
+        const profile = document.querySelector('.relative.mb-3 img');
+        const rect = profile.getBoundingClientRect();
+        const cx = rect.left + rect.width/2;
+        const cy = rect.top + rect.height/2;
+        neonCtx.clearRect(0,0,w,h);
+        // Camadas de fumaça azul/ciano (efeito menor)
+        for(let i=3;i>=1;i--){
+          // Pico/vale mais forte e alpha mais sensível ao volume
+          const base = 48 + i*10 + intensity*32;
+          const alpha = 0.10 + 0.09*i + 0.25*intensity;
+          const blur = 28*i + 60*intensity;
+          // Cor do gradiente varia levemente com a intensidade
+          const ciano = 200 + Math.floor(55*intensity);
+          const azul = 120 + Math.floor(110*intensity);
+          const grad = neonCtx.createRadialGradient(cx, cy, base*0.7, cx, cy, base*1.12+intensity*8);
+          grad.addColorStop(0, `rgba(34,${ciano},238,${0.18+0.09*i})`);
+          grad.addColorStop(0.5, `rgba(59,130,${azul},${0.13+0.09*i})`);
+          grad.addColorStop(1, `rgba(34,211,238,0.01)`);
+          neonCtx.save();
+          neonCtx.globalAlpha = alpha;
+          neonCtx.shadowColor = i===1 ? `rgb(59,130,${azul})` : `rgb(34,${ciano},238)`;
+          neonCtx.shadowBlur = blur;
+          neonCtx.beginPath();
+          // Fumaça: picos/vales mais intensos e vibração rápida
+          const t = Date.now()/400;
+          const wave = Math.sin(t + i*2) * (22+12*i) * intensity + Math.sin(t*3 + i*5) * 6 * intensity;
+          neonCtx.arc(cx, cy, base+wave, 0, Math.PI*2);
+          neonCtx.closePath();
+          neonCtx.fillStyle = grad;
+          neonCtx.fill();
+          neonCtx.restore();
+        }
+        // Halo principal mais intenso
+        const rBase = 60 + intensity*18;
+        const gradMain = neonCtx.createRadialGradient(cx, cy, rBase*0.7, cx, cy, rBase*1.12+intensity*10);
+        gradMain.addColorStop(0, `rgba(34,211,238,${0.28+0.4*intensity})`);
+        gradMain.addColorStop(0.5, `rgba(59,130,246,${0.18+0.3*intensity})`);
+        gradMain.addColorStop(1, 'rgba(34,211,238,0.01)');
+        neonCtx.save();
+        neonCtx.globalAlpha = 0.6+0.35*intensity;
+        neonCtx.shadowColor = `rgba(59,130,246,${0.5+0.5*intensity})`;
+        neonCtx.shadowBlur = 80+intensity*120;
+        neonCtx.beginPath();
+        // Pico/vale mais intenso no halo principal + vibração
+        const t = Date.now()/400;
+        const mainWave = Math.sin(t + 1.5) * 32 * intensity + Math.sin(t*2.5) * 8 * intensity;
+        neonCtx.arc(cx, cy, rBase+mainWave, 0, Math.PI*2);
+        neonCtx.closePath();
+        neonCtx.fillStyle = gradMain;
+        neonCtx.fill();
+        neonCtx.restore();
+        neonCtx.globalAlpha = 1;
+      }
+      // Loop de animação
+      function animateNeon() {
+        let intensity = 0.2;
+        if(analyser && dataArray) {
+          analyser.getByteFrequencyData(dataArray);
+          // Pega a média das frequências baixas (batida)
+          const avg = dataArray.slice(0,8).reduce((a,b)=>a+b,0)/8;
+          intensity = Math.min(1, avg/128);
+        }
+        drawNeonRing(intensity);
+        requestAnimationFrame(animateNeon);
+      }
+      // Inicialização do neon
+      window.addEventListener('DOMContentLoaded', () => {
+        setupNeonAudio();
+        animateNeon();
+      });
+      window.addEventListener('resize', resizeNeonCanvas);
+      window.addEventListener('DOMContentLoaded', resizeNeonCanvas);
+
+      // --- NOVA NAVEGAÇÃO DO CARROSSEL ---
+      const carousel = document.getElementById('carousel');
+      const arrowUp = document.getElementById('arrow-up');
+      const arrowDown = document.getElementById('arrow-down');
+      let cards = Array.from(carousel.querySelectorAll('.carousel-card'));
+      let activeIdx = 0;
+      let isBusy = false;
+      // Atualiza visual dos cards e setas
+      function updateVisual() {
+        cards.forEach((card, i) => {
+          card.classList.remove('active', 'next', 'prev', 'next2', 'prev2');
+          card.setAttribute('tabindex', i === activeIdx ? '0' : '-1');
+          if (i === activeIdx) card.classList.add('active');
+          else if (i === activeIdx + 1) card.classList.add('next');
+          else if (i === activeIdx - 1) card.classList.add('prev');
+          else if (i === activeIdx + 2) card.classList.add('next2');
+          else if (i === activeIdx - 2) card.classList.add('prev2');
+        });
+        // Setas
+        arrowUp.style.display = activeIdx > 0 ? 'flex' : 'none';
+        arrowDown.style.display = activeIdx < cards.length - 1 ? 'flex' : 'none';
+        // Centraliza seta na largura
+        arrowUp.style.left = '50%';
+        arrowDown.style.left = '50%';
+        arrowUp.style.transform = 'translateX(-50%)';
+        arrowDown.style.transform = 'translateX(-50%)';
+        // Centraliza seta na altura do card ativo
+        const activeCard = cards[activeIdx];
+        if (activeCard) {
+          arrowUp.style.top = (activeCard.offsetTop - 36) + 'px';
+          arrowDown.style.top = (activeCard.offsetTop + activeCard.offsetHeight + 8) + 'px';
+        }
+      }
+      // Animação de scroll para centralizar card
+      function animateScrollTo(target, duration = 400, cb) {
+        const start = carousel.scrollTop;
+        const change = target - start;
+        const startTime = performance.now();
+        function animate(now) {
+          const elapsed = now - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          carousel.scrollTop = start + change * (progress < 0.5 ? 2*progress*progress : -1+(4-2*progress)*progress);
+          if (progress < 1) requestAnimationFrame(animate);
+          else if (cb) cb();
+        }
+        requestAnimationFrame(animate);
+      }
+      // Centraliza card pelo índice
+      function goToCard(idx, cb) {
+        if (isBusy) return;
+        cards = Array.from(carousel.querySelectorAll('.carousel-card'));
+        if (idx < 0) idx = 0;
+        if (idx >= cards.length) idx = cards.length - 1;
+        activeIdx = idx;
+        const card = cards[activeIdx];
+        const cardTop = card.offsetTop;
+        const cardHeight = card.offsetHeight;
+        const scrollTo = cardTop - (carousel.clientHeight / 2) + (cardHeight / 2);
+        isBusy = true;
+        animateScrollTo(scrollTo, 400, () => {
+          updateVisual();
+          isBusy = false;
+          if (cb) cb();
+        });
+      }
+      // Setas
+      arrowUp.onclick = () => { if (!isBusy && activeIdx > 0) goToCard(activeIdx - 1); };
+      arrowDown.onclick = () => { if (!isBusy && activeIdx < cards.length - 1) goToCard(activeIdx + 1); };
+      // Teclado
+      carousel.addEventListener('keydown', (e) => {
+        if (isBusy) return;
+        if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+          e.preventDefault();
+          if (activeIdx > 0) goToCard(activeIdx - 1);
+        } else if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+          e.preventDefault();
+          if (activeIdx < cards.length - 1) goToCard(activeIdx + 1);
+        }
+      });
+      // Mouse scroll (um por vez)
+      let lastWheel = 0;
+      carousel.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        if (isBusy) return;
+        const now = Date.now();
+        if (now - lastWheel < 350) return; // bloqueia múltiplos
+        lastWheel = now;
+        if (e.deltaY > 0 && activeIdx < cards.length - 1) goToCard(activeIdx + 1);
+        else if (e.deltaY < 0 && activeIdx > 0) goToCard(activeIdx - 1);
+      }, { passive: false });
+      // Touch (mobile)
+      let touchStartY = null;
+      carousel.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 1) touchStartY = e.touches[0].clientY;
+      });
+      carousel.addEventListener('touchend', (e) => { touchStartY = null; });
+      carousel.addEventListener('touchmove', (e) => {
+        if (touchStartY === null || isBusy) return;
+        const deltaY = e.touches[0].clientY - touchStartY;
+        if (Math.abs(deltaY) > 40) {
+          if (deltaY < 0 && activeIdx < cards.length - 1) goToCard(activeIdx + 1);
+          else if (deltaY > 0 && activeIdx > 0) goToCard(activeIdx - 1);
+          touchStartY = null;
+        }
+      });
+      // Foco acessível no card ativo
+      function focusActiveCard() {
+        cards[activeIdx]?.focus();
+      }
+      // Inicialização
+      window.addEventListener('resize', updateVisual);
+      window.addEventListener('DOMContentLoaded', () => {
+        updateVisual();
+        goToCard(0, focusActiveCard);
+      });
+
+      // Neon exclusivo: só um card aceso por vez no desktop
+      function setupDesktopNeonExclusive() {
+        if (window.innerWidth < 1024) return;
+        const cards = Array.from(document.querySelectorAll('.carousel-card'));
+        function clearNeon() {
+          cards.forEach(c => c.classList.remove('neon'));
+        }
+        function setFirstNeon() {
+          clearNeon();
+          if (cards[0]) cards[0].classList.add('neon');
+        }
+        setFirstNeon();
+        cards.forEach(card => {
+          card.addEventListener('mouseenter', () => {
+            clearNeon();
+            card.classList.add('neon');
+          });
+          card.addEventListener('mouseleave', () => {
+            // Se nenhum card está em hover, acende o primeiro
+            setTimeout(() => {
+              if (!cards.some(c => c.matches(':hover'))) setFirstNeon();
+            }, 10);
+          });
+        });
+      }
+      window.addEventListener('DOMContentLoaded', setupDesktopNeonExclusive);
+      window.addEventListener('resize', setupDesktopNeonExclusive);
+
+      // Remover JS de hover exclusivo do desktop (setupDesktopNeonHover)
+    </script>
+
+    <footer class="mt-10 mb-4 text-center text-xs text-gray-400">
+      Feito com <span class="text-pink-400">&#10084;&#65039;</span> por <a href="https://github.com/leodigory" class="underline hover:text-cyan-400">Leondigory</a>
+    </footer>
+  </body>
+</html> 

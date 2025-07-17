@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Overlay escuro para o background */
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 30, 0.7);
+  z-index: 1;
+}
+
+/* Borda neon para foto de perfil */
+.neon-border {
+  box-shadow: 0 0 0 4px #0ff, 0 0 16px 4px #f00, 0 0 32px 8px #0ff;
+  border-radius: 9999px;
+} 
