@@ -32,7 +32,7 @@
     </div>
 
     <!-- Topo do perfil -->
-    <div class="flex flex-col items-center mt-10 mb-8">
+    <div class="flex flex-col items-center mt-6 mb-6">
       <div class="relative mb-3 flex flex-col items-center justify-center">
         <!-- Canvas Neon ocupa a tela toda, mas efeito menor e centralizado -->
         <canvas id="neon-canvas" style="position:fixed;left:0;top:0;width:100vw;height:100vh;z-index:1;pointer-events:none;"></canvas>
@@ -70,13 +70,15 @@
     </div>
 
     <!-- Carrossel de Links -->
-    <div id="carousel" class="flex flex-col lg:flex-row lg:flex-wrap lg:justify-center gap-6 w-full max-w-md lg:max-w-5xl mx-auto overflow-y-auto lg:overflow-y-visible h-[400px] lg:h-auto pb-4 no-scrollbar relative" style="padding-top:40px;padding-bottom:40px;z-index:5;">
-      <!-- Setas flutuantes -->
-      <button id="arrow-up" aria-label="Anterior" class="absolute left-1/2 -translate-x-1/2 z-20 -top-6 hidden bg-gradient-to-tr from-cyan-500/70 to-blue-500/70 shadow-lg rounded-full p-2 border-2 border-white/60 hover:scale-110 hover:shadow-xl hover:bg-cyan-400/80 transition-all duration-200 focus:outline-none backdrop-blur-md" style="box-shadow: 0 0 16px 4px #0ff8, 0 0 32px 8px #00eaff88;"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" class="w-7 h-7 opacity-80 group-hover:opacity-100 drop-shadow-[0_0_8px_#0ff]">
+    <div id="carousel" class="flex flex-col lg:flex-row lg:flex-wrap lg:justify-center gap-6 w-full max-w-md lg:max-w-5xl mx-auto overflow-y-auto lg:overflow-y-visible h-[400px] lg:h-auto pb-4 no-scrollbar relative" style="padding-top:20px;padding-bottom:20px;z-index:5;">
+      <!-- Setas flutuantes modernas e discretas -->
+      <button id="arrow-up" aria-label="Anterior" class="absolute left-1/2 -translate-x-1/2 z-20 -top-4 hidden bg-black/20 backdrop-blur-sm rounded-full p-1.5 border border-white/20 hover:bg-black/30 hover:border-white/40 transition-all duration-300 focus:outline-none" style="box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" class="w-5 h-5 opacity-70 hover:opacity-100 transition-opacity">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 15l-7-7-7 7" />
         </svg>
       </button>
-      <button id="arrow-down" aria-label="Próximo" class="absolute left-1/2 -translate-x-1/2 z-20 -bottom-6 hidden bg-gradient-to-tr from-pink-500/70 to-cyan-400/70 shadow-lg rounded-full p-2 border-2 border-white/60 hover:scale-110 hover:shadow-xl hover:bg-pink-400/80 transition-all duration-200 focus:outline-none backdrop-blur-md" style="box-shadow: 0 0 16px 4px #f0f8, 0 0 32px 8px #ff00c888;"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" class="w-7 h-7 opacity-80 group-hover:opacity-100 drop-shadow-[0_0_8px_#f0f]">
+      <button id="arrow-down" aria-label="Próximo" class="absolute left-1/2 -translate-x-1/2 z-20 -bottom-4 hidden bg-black/20 backdrop-blur-sm rounded-full p-1.5 border border-white/20 hover:bg-black/30 hover:border-white/40 transition-all duration-300 focus:outline-none" style="box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" class="w-5 h-5 opacity-70 hover:opacity-100 transition-opacity" style="filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 9l7 7 7-7" />
         </svg>
       </button>
@@ -96,12 +98,12 @@
           <div class="text-xs text-cyan-100">Aqui está meu GitHub, o repositório das minhas ideias em código! Explore projetos pessoais, soluções criativas e experimentos que desenvolvi ao longo da minha jornada como desenvolvedor.</div>
         </div>
       </a>
-      <!-- Instagram Card -->
-      <a href="https://www.instagram.com/leon_digory" target="_blank" class="carousel-card flex items-center bg-gradient-to-r from-pink-700/60 via-pink-500/60 to-yellow-400/60 shadow-lg rounded-2xl px-4 py-4 gap-4 border-2 border-pink-400/60 transition-all duration-300 group mx-auto w-[80%] max-w-sm h-36 min-h-36">
-        <img src="https://cdn.pixabay.com/photo/2022/04/01/05/40/app-7104075_1280.png" alt="Instagram" class="w-14 h-14 rounded-xl object-contain bg-white/10 border-2 border-pink-300 shadow-md" />
+      <!-- Portfólio Digital Card -->
+      <a href="#" target="_blank" class="carousel-card flex items-center shadow-lg rounded-2xl px-4 py-4 gap-4 border-2 transition-all duration-300 group mx-auto w-[80%] max-w-sm h-36 min-h-36" style="background: linear-gradient(to right, rgba(194, 65, 12, 0.6), rgba(245, 158, 11, 0.6), rgba(59, 130, 246, 0.6)); border-color: rgba(251, 146, 60, 0.6);">
+        <img src="https://cdn-icons-png.flaticon.com/512/5988/5988938.png" alt="Portfólio Digital" class="w-14 h-14 rounded-xl object-contain bg-white/10 border-2 shadow-md" style="border-color: rgba(251, 146, 60, 0.8);" />
         <div class="flex-1 min-w-0">
-          <div class="font-bold text-white text-lg mb-1">Instagram</div>
-          <div class="text-xs text-pink-100">No Instagram compartilho um pouco do meu universo: bastidores dos projetos, inspirações, dicas de tecnologia e momentos do dia a dia.</div>
+          <div class="font-bold text-white text-lg mb-1">Portfólio Digital</div>
+          <div class="text-xs" style="color: rgb(255, 237, 213);">Descubra minha galeria de projetos mais impressionantes! Uma coleção curada de aplicações web, mobile e soluções digitais que demonstram minha criatividade e expertise técnica.</div>
         </div>
       </a>
       <!-- Currículo Card -->
@@ -114,10 +116,18 @@
       </a>
       <!-- E-mail Card -->
       <a href="mailto:leodigory@gmail.com" class="carousel-card flex items-center bg-gradient-to-r from-cyan-800/60 via-blue-700/60 to-blue-900/60 shadow-lg rounded-2xl px-4 py-4 gap-4 border-2 border-cyan-400/60 transition-all duration-300 group mx-auto w-[80%] max-w-sm h-36 min-h-36">
-        <img src="https://static.vecteezy.com/system/resources/previews/022/613/021/non_2x/google-mail-gmail-icon-logo-symbol-free-png.png" alt="E-mail" class="w-14 h-14 rounded-xl object-contain bg-white/10 border-2 border-cyan-300 shadow-md" />
+        <img src="https://static.vecteezy.com/system/resources/previews/022/484/516/non_2x/google-mail-gmail-icon-logo-symbol-free-png.png" alt="E-mail" class="w-14 h-14 rounded-xl object-contain bg-white/10 border-2 border-cyan-300 shadow-md" />
         <div class="flex-1 min-w-0">
           <div class="font-bold text-white text-lg mb-1">E-mail</div>
           <div class="text-xs text-cyan-100">Quer conversar, tirar dúvidas, propor parcerias ou simplesmente trocar uma ideia? Meu e-mail está sempre aberto para novos contatos, oportunidades e desafios.</div>
+        </div>
+      </a>
+      <!-- Instagram Card -->
+      <a href="https://www.instagram.com/leon_digory" target="_blank" class="carousel-card flex items-center bg-gradient-to-r from-pink-700/60 via-pink-500/60 to-yellow-400/60 shadow-lg rounded-2xl px-4 py-4 gap-4 border-2 border-pink-400/60 transition-all duration-300 group mx-auto w-[80%] max-w-sm h-36 min-h-36">
+        <img src="https://cdn.pixabay.com/photo/2022/04/01/05/40/app-7104075_1280.png" alt="Instagram" class="w-14 h-14 rounded-xl object-contain bg-white/10 border-2 border-pink-300 shadow-md" />
+        <div class="flex-1 min-w-0">
+          <div class="font-bold text-white text-lg mb-1">Instagram</div>
+          <div class="text-xs text-pink-100">No Instagram compartilho um pouco do meu universo: bastidores dos projetos, inspirações, dicas de tecnologia e momentos do dia a dia.</div>
         </div>
       </a>
     </div>
@@ -159,6 +169,27 @@
         cursor: default;
         z-index: 0;
       }
+      /* Degradê de transparência para seta de baixo */
+      #arrow-down {
+        background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.05) 100%) !important;
+        backdrop-filter: blur(8px);
+      }
+      #arrow-down:hover {
+        background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.1) 100%) !important;
+      }
+      /* Ajustes para Safari - garantir visibilidade */
+      @supports (-webkit-touch-callout: none) {
+        body {
+          padding-top: env(safe-area-inset-top);
+          padding-bottom: env(safe-area-inset-bottom);
+        }
+        .relative.mb-3 {
+          margin-top: 1rem;
+        }
+        #carousel {
+          margin-top: 0.5rem;
+        }
+      }
       /* --- NOVO: Desktop mostra todos os cards sem opacidade/blur e esconde setas --- */
       @media (min-width: 1024px) {
         #arrow-up, #arrow-down {
@@ -178,10 +209,56 @@
           border-color: #22d3ee !important;
           box-shadow: none !important;
           position: relative !important;
+          width: 100% !important;
+          max-width: none !important;
+          height: auto !important;
+          min-height: 120px !important;
         }
         .carousel-card.neon {
           box-shadow: 0 0 0 3px #fff, 0 0 12px 4px #0ff, 0 0 32px 8px #0ff, 0 0 32px 8px #f0f !important;
           z-index: 3 !important;
+        }
+        /* Layout horizontal em grid para desktop */
+        #carousel {
+          display: grid !important;
+          grid-template-columns: repeat(3, 1fr) !important;
+          gap: 1.5rem !important;
+          max-width: 1200px !important;
+          height: auto !important;
+          overflow: visible !important;
+          padding: 2rem !important;
+        }
+        /* Ajuste para 6 cards em 2 linhas de 3 */
+        @media (min-width: 1024px) and (max-width: 1400px) {
+          #carousel {
+            grid-template-columns: repeat(2, 1fr) !important;
+            grid-template-rows: repeat(3, 1fr) !important;
+          }
+        }
+        @media (min-width: 1401px) {
+          #carousel {
+            grid-template-columns: repeat(3, 1fr) !important;
+            grid-template-rows: repeat(2, 1fr) !important;
+          }
+        }
+        /* Cards em formato retangular horizontal */
+        .carousel-card {
+          flex-direction: row !important;
+          padding: 1.5rem !important;
+          border-radius: 1rem !important;
+        }
+        .carousel-card img {
+          width: 3.5rem !important;
+          height: 3.5rem !important;
+          flex-shrink: 0 !important;
+        }
+        .carousel-card .font-bold {
+          font-size: 1.25rem !important;
+          margin-bottom: 0.5rem !important;
+        }
+        .carousel-card .text-xs {
+          font-size: 0.875rem !important;
+          line-height: 1.4 !important;
         }
       }
     </style>
@@ -389,7 +466,7 @@
         // Centraliza seta na altura do card ativo
         const activeCard = cards[activeIdx];
         if (activeCard) {
-          arrowUp.style.top = (activeCard.offsetTop - 36) + 'px';
+          arrowUp.style.top = (activeCard.offsetTop - 24) + 'px';
           arrowDown.style.top = (activeCard.offsetTop + activeCard.offsetHeight + 8) + 'px';
         }
       }
@@ -542,7 +619,7 @@
       // Remover JS de hover exclusivo do desktop (setupDesktopNeonHover)
     </script>
 
-    <footer class="mt-10 mb-4 text-center text-xs text-gray-400">
+    <footer class="mt-6 mb-4 text-center text-xs text-gray-400">
       Feito com <span class="text-pink-400">&#10084;&#65039;</span> por <a href="https://github.com/leodigory" class="underline hover:text-cyan-400">Leondigory</a>
     </footer>
   </body>

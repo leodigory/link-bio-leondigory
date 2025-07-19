@@ -4,6 +4,9 @@
   "description": "Uma página de links pessoal, responsiva e moderna, inspirada em \"link-in-bio\" para centralizar seus principais links e contatos. Ideal para Instagram, LinkedIn, TikTok, etc.",
   "main": "postcss.config.js",
   "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./src/output.css --minify",
+    "build:watch": "tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "dev": "tailwindcss -i ./src/input.css -o ./src/output.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
