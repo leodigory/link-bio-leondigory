@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://leondigory.netlify.app/sitemap.xml
+
+# Otimizações para performance
+Disallow: /node_modules/
+Disallow: /src/input.css
+Disallow: /package*.json
+Disallow: /tailwind.config.js
+Disallow: /postcss.config.js 

@@ -3,26 +3,69 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Leon Digory | Links, Portfólio, Contato e Redes</title>
-    <meta name="description" content="Leon Digory - Desenvolvedor Web/Mobile. Veja meus links, portfólio, currículo, redes sociais e contato. Página moderna, responsiva e com visual neon." />
-    <meta name="keywords" content="Leon Digory, Leonardo Araújo, desenvolvedor, web, mobile, portfólio, currículo, LinkedIn, GitHub, Instagram, e-mail, link-in-bio, neon, tecnologia, design, criatividade, soluções digitais, Netlify" />
+    <title>Leon Digory - Desenvolvedor Web Mobile | Portfólio, Links e Contato</title>
+    <meta name="description" content="Leon Digory - Desenvolvedor Web e Mobile. Acesse meu portfólio digital, GitHub, LinkedIn, Instagram e entre em contato. Página moderna com design neon e responsiva." />
+    <meta name="keywords" content="Leon Digory, Leonardo Araújo, desenvolvedor web, desenvolvedor mobile, portfólio digital, GitHub, LinkedIn, Instagram, currículo, contato, link-in-bio, tecnologia, programação, frontend, backend, React, JavaScript, CSS, HTML" />
     <meta name="author" content="Leon Digory" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://SEU-SITE-NETLIFY.netlify.app/" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="https://leondigory.netlify.app/" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="src/output.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="src/output.css" /></noscript>
+    <link rel="preload" href="src/profile.png" as="image" />
+    <link rel="preload" href="src/background.png" as="image" />
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://SEU-SITE-NETLIFY.netlify.app/" />
-    <meta property="og:title" content="Leon Digory | Links, Portfólio, Contato e Redes" />
-    <meta property="og:description" content="Leon Digory - Desenvolvedor Web/Mobile. Veja meus links, portfólio, currículo, redes sociais e contato." />
-    <meta property="og:image" content="https://SEU-SITE-NETLIFY.netlify.app/src/profile.png" />
+    <meta property="og:url" content="https://leondigory.netlify.app/" />
+    <meta property="og:title" content="Leon Digory - Desenvolvedor Web Mobile | Portfólio e Links" />
+    <meta property="og:description" content="Leon Digory - Desenvolvedor Web e Mobile. Acesse meu portfólio digital, GitHub, LinkedIn, Instagram e entre em contato." />
+    <meta property="og:image" content="https://leondigory.netlify.app/src/profile.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Leon Digory" />
+    <meta property="og:locale" content="pt_BR" />
+    
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://SEU-SITE-NETLIFY.netlify.app/" />
-    <meta name="twitter:title" content="Leon Digory | Links, Portfólio, Contato e Redes" />
-    <meta name="twitter:description" content="Leon Digory - Desenvolvedor Web/Mobile. Veja meus links, portfólio, currículo, redes sociais e contato." />
-    <meta name="twitter:image" content="https://SEU-SITE-NETLIFY.netlify.app/src/profile.png" />
-    <link href="src/output.css" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="src/profile.png" />
+    <meta name="twitter:url" content="https://leondigory.netlify.app/" />
+    <meta name="twitter:title" content="Leon Digory - Desenvolvedor Web Mobile | Portfólio e Links" />
+    <meta name="twitter:description" content="Leon Digory - Desenvolvedor Web e Mobile. Acesse meu portfólio digital, GitHub, LinkedIn, Instagram e entre em contato." />
+    <meta name="twitter:image" content="https://leondigory.netlify.app/src/profile.png" />
+    <meta name="twitter:creator" content="@leon_digory" />
+    
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#000000" />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <link rel="icon" type="image/png" sizes="32x32" href="src/profile.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="src/profile.png" />
+    <link rel="apple-touch-icon" href="src/profile.png" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Leon Digory",
+      "alternateName": "Leonardo Araújo",
+      "jobTitle": "Desenvolvedor Web e Mobile",
+      "description": "Desenvolvedor Web e Mobile apaixonado por criar soluções intuitivas e impactantes",
+      "url": "https://leondigory.netlify.app/",
+      "image": "https://leondigory.netlify.app/src/profile.png",
+      "sameAs": [
+        "https://github.com/leodigory",
+        "https://www.linkedin.com/in/leonardo-araujo-57a3ab1b5/",
+        "https://www.instagram.com/leon_digory"
+      ],
+      "email": "leodigory@gmail.com",
+      "knowsAbout": ["Desenvolvimento Web", "Desenvolvimento Mobile", "JavaScript", "React", "CSS", "HTML", "Programação"],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelancer"
+      }
+    }
+    </script>
   </head>
   <body class="relative min-h-screen flex flex-col items-center justify-center bg-black overflow-x-hidden">
     <!-- Background com overlay -->
@@ -83,7 +126,7 @@
         </svg>
       </button>
       <!-- LinkedIn Card -->
-      <a href="https://www.linkedin.com/in/leonardo-araujo-57a3ab1b5/" target="_blank" class="carousel-card flex items-center bg-gradient-to-r from-blue-800/60 via-blue-600/60 to-cyan-500/60 shadow-lg rounded-2xl px-4 py-4 gap-4 border-2 border-blue-400/60 transition-all duration-300 group mx-auto w-[80%] max-w-sm h-36 min-h-36">
+      <a href="https://www.linkedin.com/in/leonardo-araujo-57a3ab1b5/" target="_blank" rel="noopener noreferrer" class="carousel-card flex items-center bg-gradient-to-r from-blue-800/60 via-blue-600/60 to-cyan-500/60 shadow-lg rounded-2xl px-4 py-4 gap-4 border-2 border-blue-400/60 transition-all duration-300 group mx-auto w-[80%] max-w-sm h-36 min-h-36">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" class="w-14 h-14 rounded-xl object-contain bg-white/10 border-2 border-blue-300 shadow-md" />
         <div class="flex-1 min-w-0">
           <div class="font-bold text-white text-lg mb-1">LinkedIn</div>
@@ -91,7 +134,7 @@
         </div>
       </a>
       <!-- GitHub Card -->
-      <a href="https://github.com/leodigory" target="_blank" class="carousel-card flex items-center bg-gradient-to-r from-cyan-800/60 via-cyan-600/60 to-blue-700/60 shadow-lg rounded-2xl px-4 py-4 gap-4 border-2 border-cyan-400/60 transition-all duration-300 group mx-auto w-[80%] max-w-sm h-36 min-h-36">
+      <a href="https://github.com/leodigory" target="_blank" rel="noopener noreferrer" class="carousel-card flex items-center bg-gradient-to-r from-cyan-800/60 via-cyan-600/60 to-blue-700/60 shadow-lg rounded-2xl px-4 py-4 gap-4 border-2 border-cyan-400/60 transition-all duration-300 group mx-auto w-[80%] max-w-sm h-36 min-h-36">
         <img src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_960_720.png" alt="GitHub" class="w-14 h-14 rounded-xl object-contain bg-white/10 border-2 border-cyan-300 shadow-md" />
         <div class="flex-1 min-w-0">
           <div class="font-bold text-white text-lg mb-1">GitHub</div>
@@ -99,7 +142,7 @@
         </div>
       </a>
       <!-- Portfólio Digital Card -->
-      <a href="#" target="_blank" class="carousel-card flex items-center shadow-lg rounded-2xl px-4 py-4 gap-4 border-2 transition-all duration-300 group mx-auto w-[80%] max-w-sm h-36 min-h-36" style="background: linear-gradient(to right, rgba(194, 65, 12, 0.6), rgba(245, 158, 11, 0.6), rgba(59, 130, 246, 0.6)); border-color: rgba(251, 146, 60, 0.6);">
+      <a href="#" target="_blank" rel="noopener noreferrer" class="carousel-card flex items-center shadow-lg rounded-2xl px-4 py-4 gap-4 border-2 transition-all duration-300 group mx-auto w-[80%] max-w-sm h-36 min-h-36" style="background: linear-gradient(to right, rgba(194, 65, 12, 0.6), rgba(245, 158, 11, 0.6), rgba(59, 130, 246, 0.6)); border-color: rgba(251, 146, 60, 0.6);">
         <img src="https://cdn-icons-png.flaticon.com/512/5988/5988938.png" alt="Portfólio Digital" class="w-14 h-14 rounded-xl object-contain bg-white/10 border-2 shadow-md" style="border-color: rgba(251, 146, 60, 0.8);" />
         <div class="flex-1 min-w-0">
           <div class="font-bold text-white text-lg mb-1">Portfólio Digital</div>
@@ -107,7 +150,7 @@
         </div>
       </a>
       <!-- Currículo Card -->
-      <a href="#" target="_blank" class="carousel-card flex items-center bg-gradient-to-r from-purple-800/60 via-purple-600/60 to-pink-500/60 shadow-lg rounded-2xl px-4 py-4 gap-4 border-2 border-purple-400/60 transition-all duration-300 group mx-auto w-[80%] max-w-sm h-36 min-h-36">
+      <a href="#" target="_blank" rel="noopener noreferrer" class="carousel-card flex items-center bg-gradient-to-r from-purple-800/60 via-purple-600/60 to-pink-500/60 shadow-lg rounded-2xl px-4 py-4 gap-4 border-2 border-purple-400/60 transition-all duration-300 group mx-auto w-[80%] max-w-sm h-36 min-h-36">
         <img src="https://play-lh.googleusercontent.com/YxETHYRkLgYNC4ePmX4A4zW15STbIlFzVVnpA23m2pw16EHvYxh5opj490kG5M546aeu" alt="Currículo" class="w-14 h-14 rounded-xl object-contain bg-white/10 border-2 border-purple-300 shadow-md" />
         <div class="flex-1 min-w-0">
           <div class="font-bold text-white text-lg mb-1">Currículo Digital</div>
@@ -123,7 +166,7 @@
         </div>
       </a>
       <!-- Instagram Card -->
-      <a href="https://www.instagram.com/leon_digory" target="_blank" class="carousel-card flex items-center bg-gradient-to-r from-pink-700/60 via-pink-500/60 to-yellow-400/60 shadow-lg rounded-2xl px-4 py-4 gap-4 border-2 border-pink-400/60 transition-all duration-300 group mx-auto w-[80%] max-w-sm h-36 min-h-36">
+      <a href="https://www.instagram.com/leon_digory" target="_blank" rel="noopener noreferrer" class="carousel-card flex items-center bg-gradient-to-r from-pink-700/60 via-pink-500/60 to-yellow-400/60 shadow-lg rounded-2xl px-4 py-4 gap-4 border-2 border-pink-400/60 transition-all duration-300 group mx-auto w-[80%] max-w-sm h-36 min-h-36">
         <img src="https://cdn.pixabay.com/photo/2022/04/01/05/40/app-7104075_1280.png" alt="Instagram" class="w-14 h-14 rounded-xl object-contain bg-white/10 border-2 border-pink-300 shadow-md" />
         <div class="flex-1 min-w-0">
           <div class="font-bold text-white text-lg mb-1">Instagram</div>
@@ -264,17 +307,18 @@
     </style>
     <script>
       // --- Player de áudio moderno, robusto e confiável ---
-      const audioMp3 = document.getElementById('audio-mp3');
-      const audioToggle = document.getElementById('audio-toggle');
-      const iconPlay = document.getElementById('audio-icon-play');
-      const iconPause = document.getElementById('audio-icon-pause');
-      const audioVolume = document.getElementById('audio-volume');
-      let isPlaying = false;
-      // Volume inicial 50%
-      audioMp3.volume = 0.5;
-      audioVolume.value = 0.5;
-      // Web Audio API globals
-      let audioCtx = null, analyser = null, dataArray = null, audioSource = null, neonSetupDone = false;
+      document.addEventListener('DOMContentLoaded', function() {
+        const audioMp3 = document.getElementById('audio-mp3');
+        const audioToggle = document.getElementById('audio-toggle');
+        const iconPlay = document.getElementById('audio-icon-play');
+        const iconPause = document.getElementById('audio-icon-pause');
+        const audioVolume = document.getElementById('audio-volume');
+        let isPlaying = false;
+        // Volume inicial 50%
+        audioMp3.volume = 0.5;
+        audioVolume.value = 0.5;
+        // Web Audio API globals
+        let audioCtx = null, analyser = null, dataArray = null, audioSource = null, neonSetupDone = false;
       // Autoplay robusto
       function tryAutoplay() {
         // Setup Web Audio API só uma vez
@@ -305,8 +349,7 @@
           window.addEventListener('keydown', resume);
         });
       }
-      window.addEventListener('DOMContentLoaded', tryAutoplay);
-      window.addEventListener('focus', tryAutoplay);
+      
       // Play/Pause
       audioToggle.addEventListener('click', () => {
         if (isPlaying) {
@@ -321,10 +364,12 @@
         }
         isPlaying = !isPlaying;
       });
+      
       // Volume
       audioVolume.addEventListener('input', function(e) {
         audioMp3.volume = parseFloat(e.target.value);
       });
+      
       // Atualiza ícone se usuário pausar manualmente
       audioMp3.addEventListener('pause', () => {
         isPlaying = false;
@@ -340,6 +385,7 @@
       // --- Neon ao redor da foto de perfil, reativo ao som ---
       const neonCanvas = document.getElementById('neon-canvas');
       const neonCtx = neonCanvas.getContext('2d');
+      
       // Configura Web Audio API
       function setupNeonAudio() {
         try {
@@ -354,11 +400,13 @@
           analyser = null;
         }
       }
+      
       // Ajusta o canvas para tela cheia e desenha halo menor, centralizado na foto
       function resizeNeonCanvas() {
         neonCanvas.width = window.innerWidth;
         neonCanvas.height = window.innerHeight;
       }
+      
       // Desenha halo/fumaça azul ainda mais nítido e responsivo à música
       function drawNeonRing(intensity = 0.2) {
         const w = neonCanvas.width;
@@ -417,6 +465,7 @@
         neonCtx.restore();
         neonCtx.globalAlpha = 1;
       }
+      
       // Loop de animação
       function animateNeon() {
         let intensity = 0.2;
@@ -429,13 +478,12 @@
         drawNeonRing(intensity);
         requestAnimationFrame(animateNeon);
       }
+      
       // Inicialização do neon
-      window.addEventListener('DOMContentLoaded', () => {
-        setupNeonAudio();
-        animateNeon();
-      });
+      setupNeonAudio();
+      animateNeon();
       window.addEventListener('resize', resizeNeonCanvas);
-      window.addEventListener('DOMContentLoaded', resizeNeonCanvas);
+      resizeNeonCanvas();
 
       // --- NOVA NAVEGAÇÃO DO CARROSSEL ---
       const carousel = document.getElementById('carousel');
@@ -613,10 +661,13 @@
           });
         });
       }
-      window.addEventListener('DOMContentLoaded', setupDesktopNeonExclusive);
       window.addEventListener('resize', setupDesktopNeonExclusive);
+      setupDesktopNeonExclusive();
 
-      // Remover JS de hover exclusivo do desktop (setupDesktopNeonHover)
+      // Autoplay e inicialização
+      tryAutoplay();
+      window.addEventListener('focus', tryAutoplay);
+    });
     </script>
 
     <footer class="mt-6 mb-4 text-center text-xs text-gray-400">
